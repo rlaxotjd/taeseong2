@@ -10,7 +10,9 @@ Markdown is a lightweight and easy-to-use syntax for styling your writing. It in
 
 ```markdown
 Syntax highlighted code block
-
+# This is an <h1> tag
+## This is an <h2> tag
+###### This is an <h6> tag
 # Header 1
 ## Header 2
 ### Header 3
