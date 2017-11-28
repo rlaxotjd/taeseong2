@@ -1,39 +1,27 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/rlaxotjd/taeseong2/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-# This is an <h1> tag
-## This is an <h2> tag
-###### This is an <h6> tag
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- 목록
-안녕하세여
-1. 번호 매기
-2. 목록
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/rlaxotjd/taeseong2/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+{ 
+2   "name": "react-todo", 
+3   "author": "gomugom", 
+4   "description": "React Todo App", 
+5   "license": "MIT", 
+6   "version": "1.0.0", 
+7   "repository": { 
+8     "type": "git", 
+9     "url": "https://github.com/react-study/todo-app.git" 
+10   }, 
+11   "scripts": { 
+12     "start": "node ./server.js" 
+13   }, 
+14   "devDependencies": { 
+15     "babel-core": "^6.24.1", 
+16     "babel-loader": "^7.0.0", 
+17     "babel-preset-env": "^1.5.1", 
+18     "babel-preset-react": "^6.24.1", 
+19     "babel-preset-stage-1": "^6.24.1", 
+20     "react": "^15.5.4", 
+21     "react-dom": "^15.5.4", 
+22     "react-hot-loader": "next", 
+23     "webpack": "^2.6.1", 
+24     "webpack-dev-server": "^2.4.5", 
+25     "webpack-hot-middleware": "^2.18.0" 
+26   } 
+27 } 
