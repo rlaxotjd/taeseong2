@@ -1,27 +1,45 @@
-{ 
-2   "name": "react-todo", 
-3   "author": "gomugom", 
-4   "description": "React Todo App", 
-5   "license": "MIT", 
-6   "version": "1.0.0", 
-7   "repository": { 
-8     "type": "git", 
-9     "url": "https://github.com/react-study/todo-app.git" 
-10   }, 
-11   "scripts": { 
-12     "start": "node ./server.js" 
-13   }, 
-14   "devDependencies": { 
-15     "babel-core": "^6.24.1", 
-16     "babel-loader": "^7.0.0", 
-17     "babel-preset-env": "^1.5.1", 
-18     "babel-preset-react": "^6.24.1", 
-19     "babel-preset-stage-1": "^6.24.1", 
-20     "react": "^15.5.4", 
-21     "react-dom": "^15.5.4", 
-22     "react-hot-loader": "next", 
-23     "webpack": "^2.6.1", 
-24     "webpack-dev-server": "^2.4.5", 
-25     "webpack-hot-middleware": "^2.18.0" 
-26   } 
-27 } 
+const { resolve } = require('path'); 
+ const webpack = require('webpack'); 
+ 
+ 
+ const HOST = 'localhost'; 
+ const PORT = 8080; 
+ const _PATH = resolve(__dirname, 'src'); 
+ 
+ 
+ module.exports = { 
+     entry: [ 
+         `webpack-dev-server/client?http://${HOST}:${PORT}`, 
+         './main.js' 
+     ], 
+     output: { 
+         filename: 'bundle.js', 
+        path: _PATH, 16         publicPath: '/', 
+     }, 
+18     context: _PATH, 
+19     devtool: 'cheap-module-eval-source-map', 
+20     devServer: { 
+21         contentBase: _PATH, 
+22         publicPath: '/', 
+23         compress: true, 
+24         port: PORT 
+25     }, 
+26     module: { 
+27         rules: [ 
+28             { 
+29                 test: /\.jsx?$/, 
+30                 exclude: /node_modules/, 
+31                 loader: 'babel-loader' 
+32             } 
+33         ] 
+34     }, 
+35     resolve: { 
+36         modules: [ _PATH, 'node_modules' ], 
+37         extensions: [ '.js' ] 
+38     }, 
+39     plugins: [ 
+40         new webpack.NamedModulesPlugin(), 
+41         new webpack.EvalSourceMapDevToolPlugin(), 
+42         new webpack.NoEmitOnErrorsPlugin() 
+43     ] 
+44 }; 
